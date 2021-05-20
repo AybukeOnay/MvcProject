@@ -1,0 +1,55 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h2>Index</h2>
+<div class="row">
+    <div class="col-md-3">
+        <div class="small-box bg-success">
+            <div class="inner" style="text-align: center">
+                <br />
+                <h3><sup style="font-size: 50px">@ViewBag.totalCategory</sup></h3>
+                <sup style="font-size: 20px">Toplam Kategori Sayısı</sup>
+            </div>  <a href="#" class="small-box-footer"></a>
+        </div>
+    </div>
+    <div class="col-md-3">
+        <div class="small-box bg-red">
+            <div class="inner" style="text-align: center">
+                <br />
+                <h3><sup style="font-size: 50px">@ViewBag.subtitleGame</sup></h3>
+                <sup style="font-size: 20px">Oyun Kategorisi Başlık Sayısı</sup>
+            </div><a href="#" class="small-box-footer"></a>
+        </div>
+    </div>
+    <div class="col-md-3">
+        <div class="small-box bg-purple">
+            <div class="inner" style="text-align: center">
+                <br />
+                <h3><sup style="font-size: 50px">@ViewBag.novelistName</sup></h3>
+                <sup style="font-size: 20px">Yazar adında a harfi geçen yazar sayısı</sup>
+            </div><a href="#" class="small-box-footer"></a>
+        </div>
+    </div>
+    <div class="col-md-3">
+        <div class="small-box bg-blue">
+            <div class="inner" style="text-align: center">
+                <br />
+                <h3><sup style="font-size: 40px">@ViewBag.categoryTitle</sup></h3>
+                <sup style="font-size: 20px">En fazla başlığa sahip kategori adı</sup>
+            </div> <a href="#" class="small-box-footer"></a>
+        </div>
+    </div>
+    <div class="col-md-3">
+        <div class="small-box bg-orange">
+            <div class="inner" style="text-align: center">
+                <br />
+                <h3><sup style="font-size: 50px">@ViewBag.categoryStatusTrue</sup></h3>
+                <sup style="font-size: 20px">Kategori tablosunda durumu true olanlar</sup>
+            </div><a href="#" class="small-box-footer"></a>
+        </div>
+    </div>
+</div>
+
