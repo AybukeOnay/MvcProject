@@ -11,13 +11,27 @@
 {
     <div class="form-group">
         @Html.Label("Kategori Adı")
-        @Html.TextBoxFor(x => x.CategoryName,new { @class = "form-control" })
+        @Html.TextBoxFor(x => x.CategoryName, new { @class = "form-control" })
         @Html.ValidationMessageFor(x => x.CategoryName)
         <br /> <br />
         @Html.Label("Açıklama")
         @Html.TextAreaFor(x => x.CategoryDescription, new { @class = "form-control" })
         @Html.ValidationMessageFor(x => x.CategoryDescription)
         <br /><br />
-        <button class="btn btn-info">Kaydet</button>
+        <button class="btn btn-info" id="kaydet">Kaydet</button>
     </div>
+
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script src="~/Scripts/jquery-3.4.1.js"></script>
+
+    <script>
+    $("#kaydet").click(function () {
+        swal({
+            title: "Kayıt Başarılı!",
+            text: "Kaydetme işlemi başarılı!",
+            icon: "success",
+            
+        });
+    })
+    </script>
 }

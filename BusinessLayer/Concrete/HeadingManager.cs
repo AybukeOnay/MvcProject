@@ -28,14 +28,19 @@ namespace BusinessLayer.Concrete
             return _headingDal.List();
         }
 
+        public List<Heading> GetListByWriter(int id)
+        {
+            return _headingDal.List(x => x.WriterID == id);
+        }
+
         public void HeadingAddBL(Heading heading)
         {
             _headingDal.Insert(heading);
         }
 
         public void HeadingDeleteBL(Heading heading)
-        {
-            _headingDal.Delete(heading);
+        {       
+            _headingDal.Update(heading);
         }
 
         public void HeadingUpdateBL(Heading heading)

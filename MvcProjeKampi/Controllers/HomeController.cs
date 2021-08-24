@@ -8,6 +8,12 @@ namespace MvcProjeKampi.Controllers
 {
     public class HomeController : Controller
     {
+       
+        [AllowAnonymous]
+        public ActionResult HomePage()
+        {
+            return View();
+        }
         public ActionResult Index()
         {
             return View();
@@ -29,6 +35,9 @@ namespace MvcProjeKampi.Controllers
         public ActionResult Text()
         {
             return View();
+
         }
+        
+
     }
 }

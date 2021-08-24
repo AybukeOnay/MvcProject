@@ -3,30 +3,33 @@
 @{
     Layout = null;
 }
-    <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+<link href="~/Content/bootstrap.min.css" rel="stylesheet" />
 <h1>Yeni kategori ekleme sayfası</h1>
 <br />
-@using (Html.BeginForm("AddCategory","Category",FormMethod.Post))
-{ 
+@using (Html.BeginForm("AddCategory", "Category", FormMethod.Post))
+{
     <div class="form-group">
         @Html.Label("Kategori Adı")
-        @Html.TextBoxFor(x=>x.CategoryName)
-        @Html.ValidationMessageFor(x=>x.CategoryName)
+        @Html.TextBoxFor(x => x.CategoryName)
+        @Html.ValidationMessageFor(x => x.CategoryName)
         <br /> <br />
         @Html.Label("Açıklama")
-        @Html.TextBoxFor(x=>x.CategoryDescription)
-        @Html.ValidationMessageFor(x=>x.CategoryDescription)
+        @Html.TextBoxFor(x => x.CategoryDescription)
+        @Html.ValidationMessageFor(x => x.CategoryDescription)
         <br /><br />
-        <button>Kaydet</button>
+        <button class="btn btn-group" id="kaydet">Kaydet</button>
     </div>
 }
 
 
-@*<form class="form-group" method="post">
-    <input type="text" placeholder="Kategori Adı" name="CategoryName" class="form-control" />
-    <br />
-    <input type="text" placeholder="Açıklama giriniz" name="CategoryDescription" class="form-control" />
-    <br />
-    <button class="btn btn-primary" >Ekle</button>
 
-</form>*@
+
+
+@*<form class="form-group" method="post">
+        <input type="text" placeholder="Kategori Adı" name="CategoryName" class="form-control" />
+        <br />
+        <input type="text" placeholder="Açıklama giriniz" name="CategoryDescription" class="form-control" />
+        <br />
+        <button class="btn btn-primary" >Ekle</button>
+
+    </form>*@
